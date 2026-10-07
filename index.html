@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Expense Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Personal Expense Calculator</h1>
+<p class="subtitle">Track income, expenses and savings</p>
+
+<div class="summary">
+<div class="card"><h3>Total Income</h3><p id="totalIncome">₹0</p></div>
+<div class="card"><h3>Total Expenses</h3><p id="totalExpense">₹0</p></div>
+<div class="card"><h3>Savings</h3><p id="savings">₹0</p></div>
+</div>
+
+<div class="box">
+<h2>Add Income / Expense</h2>
+<form id="expenseForm">
+<input id="description" type="text" placeholder="Description (e.g. Food)" required>
+<input id="amount" type="number" min="1" placeholder="Amount (₹)" required>
+<select id="type">
+<option value="income">Income</option>
+<option value="expense">Expense</option>
+</select>
+<select id="category">
+<option>Food</option><option>Travel</option><option>Education</option>
+<option>Shopping</option><option>Bills</option><option>Entertainment</option><option>Other</option>
+</select>
+<button type="submit">Add Transaction</button>
+</form>
+<p id="message"></p>
+</div>
+
+<div class="box">
+<h2>Summary Report</h2>
+<table>
+<thead><tr><th>Description</th><th>Type</th><th>Category</th><th>Amount</th><th>Action</th></tr></thead>
+<tbody id="transactionTable"></tbody>
+</table>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
